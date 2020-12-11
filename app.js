@@ -17,7 +17,7 @@ const crawl = async () => {
 	let solved_info = [];
 	for (let mem of members) {
 		solved_info.push(await solved.getProfile(mem));
-		//await wait(500);
+		await wait(500);
 	}
 	solved_info = solved_info.filter(mem => mem.success).sort((a, b) => {
 		return a.result.user[0].rank > b.result.user[0].rank ? 1 : -1;
